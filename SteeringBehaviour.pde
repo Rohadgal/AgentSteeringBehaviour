@@ -182,8 +182,8 @@ class SteeringBehaviour {
 
 
       if (b != t_squadAgent && PVector.dist(b.m_position, t_squadAgent.m_position) <= separationRadius ) {
-        force.x += b.m_position.x - squadAgent.m_position.x;
-        force.y += b.m_position.y - squadAgent.m_position.y;
+        force.x += b.m_position.x - t_squadAgent.m_position.x;
+        force.y += b.m_position.y - t_squadAgent.m_position.y;
       }
     }
 
