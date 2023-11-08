@@ -151,7 +151,7 @@ class SteeringBehaviour {
 
     for (int i = 0; i < t_leader.m_squadSize; i++) {
       seek(t_squad.get(i), squadPositions.get(i));
-      t_squad.get(i).m_velocity.add(separation(t_leader, t_squad, t_squad.get(i)));
+      //t_squad.get(i).m_velocity.add(separation(t_leader, t_squad, t_squad.get(i)));
       arrival(t_squad.get(i), true);
     }
 
@@ -187,11 +187,11 @@ class SteeringBehaviour {
       }
     }
 
-    force.x /= t_leader.m_squadSize;
-    force.y /= t_leader.m_squadSize;
-    //force.normalize();
-    force.mult(-1);
+    //force.x /= t_leader.m_squadSize;
+    //force.y /= t_leader.m_squadSize;
     force.normalize();
+    force.mult(-1);
+    //force.normalize();
     force.mult(3);
 
     return force;
