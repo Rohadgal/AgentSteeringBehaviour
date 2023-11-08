@@ -95,8 +95,10 @@ class Agent{
   }
   
   /**
-  *
-  *
+  * @brief Function that makes the agent wander off.
+  * @param t_circleDistance sets a distance from the agent's position point in the forward direction.
+  * @param t_circleRadius sets the size of the virtual circle created in front of the agent.
+  * @param t_angleChange limits the angle of the wandering possibilities.
   */
   public void wander(float t_circleDistance, float t_circleRadius, float t_angleChange){
     //m_velocity = new PVector(10,5);
@@ -104,8 +106,8 @@ class Agent{
   }
   
   /**
-  *
-  *
+  * @brief Function that makes this agent pursuit a target by predicting where the target's position will be in the future. 
+  * @param t_target sets the target that will be chased by the agent calling the function.
   */
   public void pursuit(Agent t_target){
     keepInScreenLimits();
@@ -115,8 +117,8 @@ class Agent{
   }
   
   /**
-  *
-  *
+  * @brief Function that makes the agent that calls the function evade a specific target.
+  * @param t_target set the target to be evaded.
   */
   public void evade(Agent t_target){
     keepInScreenLimits();
@@ -126,7 +128,7 @@ class Agent{
   }
   
   /**
-  *
+  * @brief Function that makes the agent follow a specific path predetermined in the constructor. Once the path is finished the agent retraces the path back to the beginning and then starts all over.
   *
   */
   public void pathFollowing(){
@@ -136,6 +138,10 @@ class Agent{
     //arrival(isSeeking);
   }
   
+  /**
+  * @brief Function that sets the agent that calls the function as the leader of a Squad that follows it arround in a specific formation.
+  *
+  */  
   public void leader(){
     keepInScreenLimits();
     instance_steeringBehaviour.leader(this, this.m_squad);
@@ -145,7 +151,7 @@ class Agent{
   }
   
   /**
-  *
+  * @brief Function that sets the agent that calls the function as the leader of a squad that follows it around in a line formation. 
   *
   */
   public void leaderQueue(){
