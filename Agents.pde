@@ -143,11 +143,11 @@ class Agent{
   *
   */  
   public void leader(){
-    keepInScreenLimits();
+    //keepInScreenLimits();
     instance_steeringBehaviour.leader(this, this.m_squad);
-    for(Agent squadMember : this.m_squad){
-      squadMember.keepInScreenLimits();
-    }
+    //for(Agent squadMember : this.m_squad){
+    //  squadMember.keepInScreenLimits();
+    //}
   }
   
   /**
