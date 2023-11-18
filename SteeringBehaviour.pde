@@ -100,12 +100,16 @@ class SteeringBehaviour {
    */
   void pathFollowing(Agent t_agent) {
     PVector targetNode = null;
+     ArrayList<PVector> nodes = t_agent.path.getNodes();
     if (t_agent.path != null) {
-      ArrayList<PVector> nodes = t_agent.path.getNodes();
+     
       targetNode = nodes.get(t_agent.m_currentNode);
 
-      PVector distance = PVector.sub(targetNode, t_agent.m_position);
-      if (mag(distance.x, distance.y) <= t_agent.path.getRadius())
+     
+      
+    }
+     PVector distance = PVector.sub(targetNode, t_agent.m_position);
+    if (mag(distance.x, distance.y) <= t_agent.path.getRadius())
       {
         t_agent.m_currentNode += t_agent.m_pathDir;
 
@@ -114,7 +118,6 @@ class SteeringBehaviour {
           t_agent.m_currentNode += t_agent.m_pathDir;
         }
       }
-    }
     if (targetNode == null) {
       targetNode = new PVector();
     }
