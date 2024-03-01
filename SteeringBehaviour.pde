@@ -162,7 +162,7 @@ class SteeringBehaviour {
   }
 
   /**
-   * @brief Function that keesps the squad for colliding with each other and with the leader.
+   * @brief Function that keesps the squad from colliding with each other and with the leader.
    * @param t_leader sets the leader of the squad.
    * @param t_squad is a list that sets the agents of the squad.
    * @param t_squadAgent sets the agent that is separating itself from the rest.
