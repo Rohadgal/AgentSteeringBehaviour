@@ -102,11 +102,7 @@ class SteeringBehaviour {
     PVector targetNode = null;
      ArrayList<PVector> nodes = t_agent.path.getNodes();
     if (t_agent.path != null) {
-     
       targetNode = nodes.get(t_agent.m_currentNode);
-
-     
-      
     }
      PVector distance = PVector.sub(targetNode, t_agent.m_position);
     if (mag(distance.x, distance.y) <= t_agent.path.getRadius())
